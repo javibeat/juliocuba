@@ -42,15 +42,19 @@ body::before {
     align-items: center;
 }
 
-
-.logo img {
-    width: 400px; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
+.logo img {
+    width: 400px;
+    height: auto;
+}
+
+@media only screen and (max-width: 768px) {
     .logo img {
-        width: 300px; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
-        height: auto; /* Mantiene la proporción de la imagen */
+        width: 70%;
     }
-  }
+}
