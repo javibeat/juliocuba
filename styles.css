@@ -130,15 +130,17 @@ body::before {
 
 .button {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgb(0, 0, 0);
   background: #ff873d;
   width: 70px;
   height: 40px;
   font-size: 20px;
   border-radius: 35px;
   cursor: pointer;
+  font-size: 12PX;
 }
 
 .button i {
