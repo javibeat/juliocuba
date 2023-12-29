@@ -106,6 +106,7 @@ body::before {
 .presskit img {
   margin: 20px;
   width: 500px;
+  height: auto;
 }
 
 .webs {
