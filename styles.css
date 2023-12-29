@@ -22,11 +22,12 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* Esta línea hace que el fondo permanezca fijo */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  overflow: auto; /* Asegúrate de permitir el desplazamiento si es necesario */
 }
 
 body::before {
