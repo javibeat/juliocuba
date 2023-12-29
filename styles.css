@@ -178,6 +178,6 @@ body::before {
 
   .presskit img {
     max-width: 90%;
-    margin: 20px;
+    margin: 20px 20px 50px 20px;
   }
 }
