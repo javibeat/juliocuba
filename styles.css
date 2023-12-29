@@ -95,8 +95,25 @@ body::before {
   height: auto;
 }
 
+.press {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.press img {
+  width: 400px;
+  height: auto;
+}
+
 @media only screen and (max-width: 768px) {
   .logo img {
     width: 70%;
+  }
+
+  .press img {
+    width: 70%;
+    height: auto;
   }
 }
