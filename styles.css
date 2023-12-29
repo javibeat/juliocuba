@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 html,
@@ -133,7 +134,7 @@ body::before {
   align-items: center;
   color: white;
   background: #ff873d;
-  width: 40px;
+  width: 70px;
   height: 40px;
   font-size: 20px;
   border-radius: 35px;
@@ -144,13 +145,29 @@ body::before {
   font-size: 24px;
 }
 
+.logo img.logo1 {
+  width: 250px; /* ajusta según sea necesario */
+  height: auto;
+}
+
+.down {
+  margin-bottom: 50px;
+}
+
 @media only screen and (max-width: 768px) {
+  .press a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
   .logo img {
     width: 70%;
   }
 
   .press img {
-    width: 70%;
+    width: 80%;
     height: auto;
   }
 }
