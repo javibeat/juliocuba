@@ -97,7 +97,14 @@ body::before {
   width: 200px;
 }
 
+.presskit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .presskit img {
+  margin: 20px;
   width: 500px;
 }
 
