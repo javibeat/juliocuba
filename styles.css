@@ -143,5 +143,16 @@ body::before {
 }
 
 @media only screen and (max-width: 768px) {
+  body {
+    overflow-y: auto; 
+  }
 
+  .presskit {
+    justify-content: center;
+  }
+
+  .presskit img {
+    max-width: 500px;
+    margin: 20px;
+  }
 }
