@@ -47,3 +47,10 @@ body::before {
     width: 400px; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
 }
+
+@media only screen and (max-width: 600px) {
+    .logo img {
+        width: 300px; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+  }
