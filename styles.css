@@ -22,7 +22,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* La imagen de fondo permanecerá fija con respecto al viewport */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -76,7 +76,6 @@ body::before {
 /*FIN MENU*/
 
 .container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +83,6 @@ body::before {
 }
 
 .container2 {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
