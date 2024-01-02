@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /directorio-no-deseado/
+Allow: /
+
+Sitemap: https://juliocuba.es/sitemap.xml
