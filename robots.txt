@@ -1,5 +1,8 @@
 User-agent: *
-Disallow: /directorio-no-deseado/
 Allow: /
+
+# Disallow irrelevant files
+Disallow: /*.pdf$
+Disallow: /*.mp4$
 
 Sitemap: https://juliocuba.es/sitemap.xml
