@@ -1,0 +1,12 @@
+{
+    "name": "juliocuba-website",
+    "version": "1.0.0",
+    "description": "Sitio web de Julio Cuba - Violinista profesional",
+    "scripts": {
+        "build": "node scripts/build.js",
+        "dev": "npx serve .",
+        "predeploy": "npm run build"
+    },
+    "author": "Julio Cuba",
+    "license": "ISC"
+}

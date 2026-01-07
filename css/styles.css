@@ -1,0 +1,529 @@
+/* ==========================================================================
+   Base Reset & Variables
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ff6200;
+  --primary-hover: #e55800;
+  --overlay-bg: rgba(0, 0, 0, 0.613);
+  --text-light: #fff;
+  --text-dark: #000;
+  --font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================================================
+   Background
+   ========================================================================== */
+body {
+  background-image: url('../assets/images/julio.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-bg);
+  z-index: -1;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 15;
+}
+
+.navbar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 12px;
+  transition: opacity 0.2s ease;
+  gap: 4px;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+.navbar a.active svg {
+  filter: invert(100%);
+}
+
+.navbar svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ==========================================================================
+   Layout Containers
+   ========================================================================== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centro img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* ==========================================================================
+   Press / Logo Section
+   ========================================================================== */
+.press {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+.presskit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.presskit img {
+  margin: 20px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* ==========================================================================
+   Social Links / Contact
+   ========================================================================== */
+.webs {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.pill {
+  background-color: var(--primary-color);
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.pill:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.02);
+}
+
+.direct {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-dark);
+  background: var(--primary-color);
+  width: 60px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.ras {
+  display: flex;
+  background-color: var(--primary-color);
+  padding: 5px;
+  width: fit-content;
+  border-radius: 20px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.rasus {
+  width: 150px;
+  height: auto;
+}
+
+/* ==========================================================================
+   Video Slider
+   ========================================================================== */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  align-items: center;
+}
+
+.slider-nav-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.slider-nav-buttons button {
+  pointer-events: auto;
+}
+
+.slider-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.slider-item .media-container {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.slider-item video,
+.slider-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.download-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: var(--primary-hover);
+}
+
+button.prev,
+button.next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--text-light);
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.prev:active,
+button.next:active {
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   Responsive - Tablet
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+
+  html,
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    width: auto;
+    min-width: 280px;
+    max-width: calc(100% - 40px);
+    bottom: 20px;
+    border-radius: 40px;
+    padding: 10px 15px;
+    padding-bottom: calc(10px + var(--safe-area-bottom));
+  }
+
+  .navbar a {
+    font-size: 10px;
+  }
+
+  .navbar svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .container,
+  .container2 {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
+    padding-bottom: calc(80px + var(--safe-area-bottom));
+  }
+
+  .centro img {
+    max-width: 250px;
+  }
+
+  .presskit img {
+    max-width: 90%;
+    margin: 15px 0;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .slider-item .media-container {
+    height: auto;
+    min-height: 200px;
+    padding: 15px 50px;
+  }
+
+  .download-button {
+    width: 80%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* Chevrones a los lados con diseño mejorado */
+  .slider-nav-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    pointer-events: none;
+  }
+
+  button.prev,
+  button.next {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    pointer-events: auto;
+  }
+
+  button.prev:hover,
+  button.next:hover {
+    background-color: var(--primary-hover);
+  }
+}
+
+/* ==========================================================================
+   Responsive - Mobile Small
+   ========================================================================== */
+@media screen and (max-width: 375px) {
+  .navbar a {
+    font-size: 9px;
+  }
+
+  .navbar svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .centro img {
+    max-width: 200px;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .pill {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .button {
+    width: 50px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .slider-item .media-container {
+    padding: 10px;
+    min-height: 200px;
+  }
+}
+
+/* ==========================================================================
+   Responsive - Large Phones
+   ========================================================================== */
+@media screen and (min-width: 376px) and (max-width: 430px) {
+  .centro img {
+    max-width: 280px;
+  }
+}
+
+/* ==========================================================================
+   Responsive - Desktop Large
+   ========================================================================== */
+@media screen and (min-width: 1200px) {
+  .centro img {
+    max-width: 500px;
+  }
+
+  .slider-item .media-container {
+    height: 500px;
+    padding: 60px;
+  }
+}
+
+/* ==========================================================================
+   High Contrast / Accessibility
+   ========================================================================== */
+@media (prefers-contrast: high) {
+
+  .pill,
+  .button,
+  .navbar,
+  .download-button {
+    border: 2px solid var(--text-light);
+  }
+}
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

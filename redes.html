@@ -9,9 +9,7 @@
     <title>Contacto y Redes Sociales | Julio Cuba - Violinista</title>
     <meta name="title" content="Contacto y Redes Sociales | Julio Cuba - Violinista">
     <meta name="description"
-        content="Contacta con Julio Cuba para contrataciones y eventos. Síguelo en Instagram, Facebook, Spotify, YouTube y SoundCloud. Reservas para bodas y eventos corporativos.">
-    <meta name="keywords"
-        content="contratar violinista, contacto Julio Cuba, redes sociales músico, booking violinista España Dubai">
+        content="Contacta con Julio Cuba para contrataciones y eventos. Síguelo en Instagram, Facebook, Spotify, YouTube y SoundCloud.">
     <meta name="author" content="Julio Cuba">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://juliocuba.es/redes.html">
@@ -22,7 +20,7 @@
     <meta property="og:title" content="Contacto y Redes Sociales | Julio Cuba">
     <meta property="og:description"
         content="Contacta con Julio Cuba para contrataciones. Síguelo en todas sus redes sociales.">
-    <meta property="og:image" content="https://juliocuba.es/logo1.png">
+    <meta property="og:image" content="https://juliocuba.es/assets/images/logo1.webp">
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Julio Cuba">
 
@@ -30,96 +28,123 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://juliocuba.es/redes.html">
     <meta name="twitter:title" content="Contacto y Redes Sociales | Julio Cuba">
-    <meta name="twitter:description"
-        content="Contacta con Julio Cuba para contrataciones. Síguelo en todas sus redes sociales.">
-    <meta name="twitter:image" content="https://juliocuba.es/logo1.png">
+    <meta name="twitter:description" content="Contacta con Julio Cuba para contrataciones.">
+    <meta name="twitter:image" content="https://juliocuba.es/assets/images/logo1.webp">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo1.png">
-    <link rel="apple-touch-icon" href="logo1.png">
+    <link rel="icon" type="image/png" href="assets/images/logo1.png">
+    <link rel="apple-touch-icon" href="assets/images/logo1.png">
 
-    <!-- Preconnect for performance -->
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="assets/images/julio.webp" as="image">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- External CSS -->
+    <!-- Boxicons for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css">
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/5210dbf26f.js" crossorigin="anonymous" defer></script>
-
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
-    <nav class="navbar" role="navigation" aria-label="Navegación principal">
-        <a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> HOME</a>
-        <a href="press.html"><i class="fas fa-file-alt" aria-hidden="true"></i> PRESSKIT</a>
-        <a href="redes.html" class="active" aria-current="page"><i class="fas fa-users" aria-hidden="true"></i>
-            SOCIAL</a>
-        <a href="video.html"><i class="fas fa-video" aria-hidden="true"></i> PROMO</a>
-    </nav>
+    <!-- NAVBAR_START -->
+    <nav class="navbar" role="navigation" aria-label="Navegación principal" id="main-navbar">
+    <a href="index.html" data-page="index">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </svg>
+        HOME
+    </a>
+    <a href="press.html" data-page="press">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <path
+                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+        </svg>
+        PRESSKIT
+    </a>
+    <a href="redes.html" data-page="redes" class="active" aria-current="page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <path
+                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+        </svg>
+        SOCIAL
+    </a>
+    <a href="video.html" data-page="video">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <path
+                d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
+        </svg>
+        PROMO
+    </a>
+</nav>
+    <!-- NAVBAR_END -->
 
     <main class="container2">
         <article class="press">
             <header class="logo">
-                <img src="logo1.png" alt="Julio Cuba - Violinista Profesional" width="200" height="auto"
-                    loading="eager">
+                <picture>
+                    <source srcset="assets/images/logo1.webp" type="image/webp">
+                    <img src="assets/images/logo1.png" alt="Julio Cuba - Violinista Profesional" width="200" height="95"
+                        loading="eager">
+                </picture>
             </header>
 
             <section class="webs" aria-label="Redes sociales y contacto">
-                <a href="https://www.instagram.com/juliocuba/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Seguir a Julio Cuba en Instagram">
+                <a href="https://www.instagram.com/juliocuba/" target="_blank" rel="noopener noreferrer">
                     <div class="pill">INSTAGRAM</div>
                 </a>
-                <a href="https://www.facebook.com/julio.cuba.9" target="_blank" rel="noopener noreferrer"
-                    aria-label="Seguir a Julio Cuba en Facebook">
+                <a href="https://www.facebook.com/julio.cuba.9" target="_blank" rel="noopener noreferrer">
                     <div class="pill">FACEBOOK</div>
                 </a>
-                <a href="https://open.spotify.com/user/1123450222" target="_blank" rel="noopener noreferrer"
-                    aria-label="Escuchar a Julio Cuba en Spotify">
+                <a href="https://open.spotify.com/user/1123450222" target="_blank" rel="noopener noreferrer">
                     <div class="pill">SPOTIFY</div>
                 </a>
-                <a href="https://soundcloud.com/julio-munoz-125403295" target="_blank" rel="noopener noreferrer"
-                    aria-label="Escuchar a Julio Cuba en SoundCloud">
+                <a href="https://soundcloud.com/julio-munoz-125403295" target="_blank" rel="noopener noreferrer">
                     <div class="pill">SOUNDCLOUD</div>
                 </a>
-                <a href="https://www.youtube.com/user/julitocuba" target="_blank" rel="noopener noreferrer"
-                    aria-label="Ver videos de Julio Cuba en YouTube">
+                <a href="https://www.youtube.com/user/julitocuba" target="_blank" rel="noopener noreferrer">
                     <div class="pill">YOUTUBE</div>
                 </a>
 
-                <a href="mailto:rasusentertainment@gmail.com"
-                    aria-label="Enviar email para booking a través de Rasus Entertainment">
+                <a href="mailto:rasusentertainment@gmail.com">
                     <div class="pill">BOOKINGS RASUS ENTERTAINMENT</div>
                 </a>
 
                 <div class="direct" role="group" aria-label="Contacto directo">
                     <a href="https://api.whatsapp.com/send?phone=34609589677" target="_blank" rel="noopener noreferrer"
-                        aria-label="Contactar por WhatsApp España">
-                        <div class="button"><i class='bx bxl-whatsapp' aria-hidden="true"></i></div>
+                        aria-label="WhatsApp">
+                        <div class="button"><i class='bx bxl-whatsapp'></i></div>
                     </a>
-                    <a href="mailto:julitocuba@hotmail.com" aria-label="Enviar email directo a Julio Cuba">
-                        <div class="button"><i class='bx bx-envelope' aria-hidden="true"></i></div>
+                    <a href="mailto:julitocuba@hotmail.com" aria-label="Email">
+                        <div class="button"><i class='bx bx-envelope'></i></div>
                     </a>
-                    <a href="tel:+34609589677" aria-label="Llamar a España: +34 609 589 677">
-                        <div class="button"><i class='bx bx-phone' aria-hidden="true"></i></div>
+                    <a href="tel:+34609589677" aria-label="Teléfono España">
+                        <div class="button"><i class='bx bx-phone'></i></div>
                     </a>
-                    <a href="tel:+971585077632" aria-label="Llamar a Dubai: +971 585 077 632">
-                        <div class="button"><i class='bx bx-phone' aria-hidden="true"></i></div>
+                    <a href="tel:+971585077632" aria-label="Teléfono Dubai">
+                        <div class="button"><i class='bx bx-phone'></i></div>
                     </a>
                 </div>
 
                 <div class="ras">
-                    <img class="rasus" src="rasus.png" alt="Rasus Entertainment - Representante de Julio Cuba"
-                        width="150" height="auto" loading="lazy">
+                    <picture>
+                        <source srcset="assets/images/rasus.webp" type="image/webp">
+                        <img class="rasus" src="assets/images/rasus.png" alt="Rasus Entertainment" width="150"
+                            height="78" loading="lazy">
+                    </picture>
                 </div>
             </section>
         </article>
     </main>
-
 </body>
 
 </html>

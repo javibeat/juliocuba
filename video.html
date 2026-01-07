@@ -10,8 +10,6 @@
     <meta name="title" content="Videos Promocionales | Julio Cuba - Violinista">
     <meta name="description"
         content="Mira los videos promocionales de Julio Cuba en acción. Descarga material de alta calidad para eventos, medios y promociones.">
-    <meta name="keywords"
-        content="videos violinista, promo Julio Cuba, violinista en vivo video, material promocional músico">
     <meta name="author" content="Julio Cuba">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://juliocuba.es/video.html">
@@ -20,9 +18,8 @@
     <meta property="og:type" content="video.other">
     <meta property="og:url" content="https://juliocuba.es/video.html">
     <meta property="og:title" content="Videos Promocionales | Julio Cuba - Violinista">
-    <meta property="og:description"
-        content="Mira los videos promocionales de Julio Cuba en acción. Material de alta calidad disponible para descarga.">
-    <meta property="og:image" content="https://juliocuba.es/julio.jpg">
+    <meta property="og:description" content="Mira los videos promocionales de Julio Cuba en acción.">
+    <meta property="og:image" content="https://juliocuba.es/assets/images/julio.webp">
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Julio Cuba">
 
@@ -31,36 +28,61 @@
     <meta name="twitter:url" content="https://juliocuba.es/video.html">
     <meta name="twitter:title" content="Videos Promocionales | Julio Cuba - Violinista">
     <meta name="twitter:description" content="Mira los videos promocionales de Julio Cuba en acción.">
-    <meta name="twitter:image" content="https://juliocuba.es/julio.jpg">
+    <meta name="twitter:image" content="https://juliocuba.es/assets/images/julio.webp">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo1.png">
-    <link rel="apple-touch-icon" href="logo1.png">
+    <link rel="icon" type="image/png" href="assets/images/logo1.png">
+    <link rel="apple-touch-icon" href="assets/images/logo1.png">
 
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="assets/images/julio.webp" as="image">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/5210dbf26f.js" crossorigin="anonymous" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
-    <nav class="navbar" role="navigation" aria-label="Navegación principal">
-        <a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> HOME</a>
-        <a href="press.html"><i class="fas fa-file-alt" aria-hidden="true"></i> PRESSKIT</a>
-        <a href="redes.html"><i class="fas fa-users" aria-hidden="true"></i> SOCIAL</a>
-        <a href="video.html" class="active" aria-current="page"><i class="fas fa-video" aria-hidden="true"></i>
-            PROMO</a>
-    </nav>
+    <!-- NAVBAR_START -->
+    <nav class="navbar" role="navigation" aria-label="Navegación principal" id="main-navbar">
+    <a href="index.html" data-page="index">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </svg>
+        HOME
+    </a>
+    <a href="press.html" data-page="press">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <path
+                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+        </svg>
+        PRESSKIT
+    </a>
+    <a href="redes.html" data-page="redes">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <path
+                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+        </svg>
+        SOCIAL
+    </a>
+    <a href="video.html" data-page="video" class="active" aria-current="page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <path
+                d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
+        </svg>
+        PROMO
+    </a>
+</nav>
+    <!-- NAVBAR_END -->
 
     <main class="container">
         <section class="slider" aria-label="Galería de videos e imágenes promocionales">
@@ -68,61 +90,78 @@
                 <!-- Video 1 -->
                 <article class="slider-item">
                     <div class="media-container">
-                        <video controls preload="metadata" aria-label="Video promocional 1 de Julio Cuba">
-                            <source src="3.mp4" type="video/mp4">
+                        <video controls preload="metadata" playsinline>
+                            <source src="assets/videos/3.mp4" type="video/mp4">
                             Tu navegador no soporta el elemento video.
                         </video>
                     </div>
-                    <a href="3.mp4" download="Julio_Cuba_Promo_1.mp4" class="download-button">Descargar</a>
+                    <a href="assets/videos/3.mp4" download="Julio_Cuba_Promo_1.mp4"
+                        class="download-button">Descargar</a>
                 </article>
                 <!-- Video 2 -->
                 <article class="slider-item">
                     <div class="media-container">
-                        <video controls preload="metadata" aria-label="Video promocional 2 de Julio Cuba">
-                            <source src="2.mp4" type="video/mp4">
+                        <video controls preload="none" playsinline>
+                            <source src="assets/videos/2.mp4" type="video/mp4">
                             Tu navegador no soporta el elemento video.
                         </video>
                     </div>
-                    <a href="2.mp4" download="Julio_Cuba_Promo_2.mp4" class="download-button">Descargar</a>
+                    <a href="assets/videos/2.mp4" download="Julio_Cuba_Promo_2.mp4"
+                        class="download-button">Descargar</a>
                 </article>
                 <!-- Video 3 -->
                 <article class="slider-item">
                     <div class="media-container">
-                        <video controls preload="metadata" aria-label="Video promocional 3 de Julio Cuba">
-                            <source src="1.mp4" type="video/mp4">
+                        <video controls preload="none" playsinline>
+                            <source src="assets/videos/1.mp4" type="video/mp4">
                             Tu navegador no soporta el elemento video.
                         </video>
                     </div>
-                    <a href="1.mp4" download="Julio_Cuba_Promo_3.mp4" class="download-button">Descargar</a>
+                    <a href="assets/videos/1.mp4" download="Julio_Cuba_Promo_3.mp4"
+                        class="download-button">Descargar</a>
                 </article>
                 <!-- Logo -->
                 <article class="slider-item">
                     <div class="media-container">
-                        <img src="logo1.png" alt="Logo oficial de Julio Cuba en alta resolución" loading="lazy">
+                        <picture>
+                            <source srcset="assets/images/logo1.webp" type="image/webp">
+                            <img src="assets/images/logo1.png" alt="Logo oficial de Julio Cuba" loading="lazy"
+                                width="400" height="189">
+                        </picture>
                     </div>
-                    <a href="logo1.png" download="Julio_Cuba_Logo.png" class="download-button">Descargar</a>
+                    <a href="assets/images/logo1.png" download="Julio_Cuba_Logo.png"
+                        class="download-button">Descargar</a>
                 </article>
                 <!-- Julio Image 1 -->
                 <article class="slider-item">
                     <div class="media-container">
-                        <img src="julio.jpg" alt="Julio Cuba tocando el violín en evento" loading="lazy">
+                        <picture>
+                            <source srcset="assets/images/julio.webp" type="image/webp">
+                            <img src="assets/images/julio.jpg" alt="Julio Cuba tocando el violín" loading="lazy"
+                                width="700" height="495">
+                        </picture>
                     </div>
-                    <a href="julio.jpg" download="Julio_Cuba_Foto.jpg" class="download-button">Descargar</a>
+                    <a href="assets/images/julio.jpg" download="Julio_Cuba_Foto.jpg"
+                        class="download-button">Descargar</a>
                 </article>
                 <!-- Julio Image 2 -->
                 <article class="slider-item">
                     <div class="media-container">
-                        <img src="julio.png" alt="Julio Cuba - Foto promocional con fondo transparente" loading="lazy">
+                        <img src="assets/images/julio-full.png" alt="Julio Cuba - Foto promocional" loading="lazy"
+                            width="700" height="auto">
                     </div>
-                    <a href="julio.png" download="Julio_Cuba_Foto_PNG.png" class="download-button">Descargar</a>
+                    <a href="assets/images/julio-full.png" download="Julio_Cuba_Foto_PNG.png"
+                        class="download-button">Descargar</a>
                 </article>
             </div>
-            <button class="prev" aria-label="Ver anterior">&#10094;</button>
-            <button class="next" aria-label="Ver siguiente">&#10095;</button>
+            <div class="slider-nav-buttons">
+                <button class="prev" aria-label="Ver anterior">&#10094;</button>
+                <button class="next" aria-label="Ver siguiente">&#10095;</button>
+            </div>
         </section>
     </main>
 
-    <script src="scripts.js" defer></script>
+    <script src="js/scripts.js" defer></script>
 </body>
 
 </html>
