@@ -21,7 +21,7 @@
   --border-gold: rgba(201, 168, 76, 0.25);
   --text-primary: #f5f0e8;
   --text-secondary: rgba(245, 240, 232, 0.6);
-  --text-dim: rgba(245, 240, 232, 0.3);
+  --text-dim: rgba(245, 240, 232, 0.45);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Outfit", system-ui, sans-serif;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -682,7 +682,7 @@ img, video {
   font-size: 0.85rem;
   font-weight: 300;
   line-height: 1.7;
-  color: var(--text-dim);
+  color: var(--text-secondary);
 }
 
 /* ============================================================
