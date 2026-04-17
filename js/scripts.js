@@ -66,6 +66,70 @@ document.addEventListener("DOMContentLoaded", function () {
         }, { passive: true });
     }
 
+    // ---- Lightbox ----
+    var lightbox = document.getElementById("lightbox");
+    var galleryItems = document.querySelectorAll(".gallery-item");
+
+    if (lightbox && galleryItems.length > 0) {
+        var lbImg = lightbox.querySelector(".lightbox__img");
+        var lbClose = lightbox.querySelector(".lightbox__close");
+        var lbPrev = lightbox.querySelector(".lightbox__nav--prev");
+        var lbNext = lightbox.querySelector(".lightbox__nav--next");
+        var lbCounter = lightbox.querySelector(".lightbox__counter");
+        var lbIndex = 0;
+
+        var gallerySrcs = [];
+        var galleryAlts = [];
+        galleryItems.forEach(function (item) {
+            var img = item.querySelector("img");
+            if (img) {
+                gallerySrcs.push(img.src);
+                galleryAlts.push(img.alt || "");
+            }
+        });
+
+        function openLightbox(index) {
+            lbIndex = index;
+            lbImg.src = gallerySrcs[lbIndex];
+            lbImg.alt = galleryAlts[lbIndex];
+            lbCounter.textContent = (lbIndex + 1) + " / " + gallerySrcs.length;
+            lightbox.classList.add("open");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove("open");
+            document.body.style.overflow = "";
+        }
+
+        function nextLightbox() {
+            openLightbox((lbIndex + 1) % gallerySrcs.length);
+        }
+
+        function prevLightbox() {
+            openLightbox((lbIndex - 1 + gallerySrcs.length) % gallerySrcs.length);
+        }
+
+        galleryItems.forEach(function (item, i) {
+            item.addEventListener("click", function () { openLightbox(i); });
+        });
+
+        lbClose.addEventListener("click", closeLightbox);
+        lbPrev.addEventListener("click", prevLightbox);
+        lbNext.addEventListener("click", nextLightbox);
+
+        lightbox.addEventListener("click", function (e) {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (!lightbox.classList.contains("open")) return;
+            if (e.key === "Escape") closeLightbox();
+            else if (e.key === "ArrowRight") nextLightbox();
+            else if (e.key === "ArrowLeft") prevLightbox();
+        });
+    }
+
     // ---- Video slider (legacy pages) ----
     var slider = document.querySelector(".slider-content");
     var items = document.querySelectorAll(".slider-item");

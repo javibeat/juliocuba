@@ -22,4 +22,10 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 Sitemap: https://juliocuba.es/sitemap.xml
