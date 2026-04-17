@@ -8,12 +8,31 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburger.addEventListener("click", function () {
             hamburger.classList.toggle("open");
             navLinks.classList.toggle("open");
+            if (navLinks.classList.contains("open")) {
+                document.body.style.overflow = "hidden";
+                document.body.style.position = "fixed";
+                document.body.style.width = "100%";
+                document.body.style.top = "-" + window.scrollY + "px";
+            } else {
+                var scrollY = document.body.style.top;
+                document.body.style.overflow = "";
+                document.body.style.position = "";
+                document.body.style.width = "";
+                document.body.style.top = "";
+                window.scrollTo(0, parseInt(scrollY || "0") * -1);
+            }
         });
 
         navLinks.querySelectorAll("a").forEach(function (link) {
             link.addEventListener("click", function () {
                 hamburger.classList.remove("open");
                 navLinks.classList.remove("open");
+                var scrollY = document.body.style.top;
+                document.body.style.overflow = "";
+                document.body.style.position = "";
+                document.body.style.width = "";
+                document.body.style.top = "";
+                window.scrollTo(0, parseInt(scrollY || "0") * -1);
             });
         });
     }
