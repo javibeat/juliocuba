@@ -1,38 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ---- Hamburger menu ----
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-links");
+    // ---- Mobile menu ----
+    var hamburger = document.getElementById("hamburger");
+    var mobileMenu = document.getElementById("mobile-menu");
+    var savedScrollY = 0;
 
-    if (hamburger && navLinks) {
+    function openMenu() {
+        savedScrollY = window.scrollY;
+        hamburger.classList.add("open");
+        mobileMenu.classList.add("open");
+        document.body.style.overflow = "hidden";
+        document.body.style.position = "fixed";
+        document.body.style.width = "100%";
+        document.body.style.top = "-" + savedScrollY + "px";
+    }
+
+    function closeMenu() {
+        hamburger.classList.remove("open");
+        mobileMenu.classList.remove("open");
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
+        document.body.style.top = "";
+        window.scrollTo(0, savedScrollY);
+    }
+
+    if (hamburger && mobileMenu) {
         hamburger.addEventListener("click", function () {
-            hamburger.classList.toggle("open");
-            navLinks.classList.toggle("open");
-            if (navLinks.classList.contains("open")) {
-                document.body.style.overflow = "hidden";
-                document.body.style.position = "fixed";
-                document.body.style.width = "100%";
-                document.body.style.top = "-" + window.scrollY + "px";
+            if (mobileMenu.classList.contains("open")) {
+                closeMenu();
             } else {
-                var scrollY = document.body.style.top;
-                document.body.style.overflow = "";
-                document.body.style.position = "";
-                document.body.style.width = "";
-                document.body.style.top = "";
-                window.scrollTo(0, parseInt(scrollY || "0") * -1);
+                openMenu();
             }
         });
 
-        navLinks.querySelectorAll("a").forEach(function (link) {
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
             link.addEventListener("click", function () {
-                hamburger.classList.remove("open");
-                navLinks.classList.remove("open");
-                var scrollY = document.body.style.top;
-                document.body.style.overflow = "";
-                document.body.style.position = "";
-                document.body.style.width = "";
-                document.body.style.top = "";
-                window.scrollTo(0, parseInt(scrollY || "0") * -1);
+                closeMenu();
             });
         });
     }
