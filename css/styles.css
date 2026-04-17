@@ -301,7 +301,7 @@ img, video {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.8;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.85);
   max-width: 620px;
 }
 
@@ -714,7 +714,7 @@ img, video {
   font-size: 0.85rem;
   font-weight: 300;
   line-height: 1.7;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ============================================================
