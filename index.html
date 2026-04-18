@@ -58,12 +58,13 @@
     <!-- Preload -->
     <link rel="preload" href="assets/images/julio.webp" as="image" type="image/webp" fetchpriority="high">
 
-    <!-- Fonts -->
+    <!-- Fonts (non-render-blocking, display=optional prevents CLS from font swap) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=optional" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=optional"></noscript>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=swap">
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Schema.org — Person -->
@@ -242,7 +243,6 @@
             </picture>
         </div>
         <div class="hero__overlay" aria-hidden="true"></div>
-        <div class="hero__particles" aria-hidden="true"></div>
         <div class="hero__content">
             <span class="hero__label">International Electric Violinist</span>
             <h1 class="hero__title">
