@@ -55,8 +55,33 @@
     <link rel="icon" type="image/png" href="assets/images/logo1.png">
     <link rel="apple-touch-icon" href="assets/images/logo1.png">
 
-    <!-- Critical: paint hero immediately -->
-    <style>body{margin:0;background:#0a0a0a;overflow-x:hidden}img,video{display:block;max-width:100%}.hero{position:relative;height:100vh;height:100dvh;overflow:hidden}.hero__bg{position:absolute;inset:0}.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 15%}.hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.2) 0%,rgba(10,10,10,.15) 30%,rgba(10,10,10,.5) 55%,rgba(10,10,10,.95) 100%);z-index:1}</style>
+    <!-- Critical: paint hero + nav immediately to prevent CLS -->
+    <style>
+      *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+      body{font-family:"Outfit",-apple-system,system-ui,sans-serif;color:#fff;background:#0a0a0a;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+      a{text-decoration:none;color:inherit}
+      img,video{display:block;max-width:100%}
+      .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent}
+      .nav__inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:64px}
+      .nav__logo{height:28px;width:auto;opacity:.9}
+      .nav__links{display:flex;gap:32px;list-style:none}
+      .nav__link{font-size:.7rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+      .nav__hamburger{display:none}
+      .hero{position:relative;height:100vh;height:100dvh;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden;padding-bottom:60px}
+      .hero__bg{position:absolute;inset:0;z-index:0}
+      .hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+      .hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.2) 0%,rgba(10,10,10,.15) 30%,rgba(10,10,10,.5) 55%,rgba(10,10,10,.95) 100%);z-index:1}
+      .hero__content{position:relative;z-index:3;max-width:850px;padding:0 24px}
+      .hero__label{display:inline-block;font-size:.72rem;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:#c9a84c;margin-bottom:20px}
+      .hero__title{font-family:"Cormorant Garamond","Times New Roman",Georgia,serif;font-size:clamp(2.2rem,5.5vw,4.5rem);font-weight:300;font-style:italic;line-height:1.15;color:#fff;margin-bottom:24px}
+      .hero__title strong{font-weight:500;font-style:normal;color:#e4cc7a}
+      .hero__subtitle{font-size:clamp(.92rem,1.6vw,1.1rem);font-weight:300;line-height:1.75;color:rgba(255,255,255,.85);max-width:600px;margin:0 auto 36px}
+      .hero__cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+      .btn{display:inline-flex;align-items:center;padding:14px 32px;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;border:1px solid #c9a84c;color:#c9a84c;background:transparent;cursor:pointer}
+      .btn--filled{background:#c9a84c;color:#0a0a0a}
+      .mobile-menu{display:none}
+      @media(max-width:900px){.nav__links{display:none!important}.nav__hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:10000;position:relative}.nav__hamburger span{width:22px;height:1.5px;background:#fff}.hero{padding-bottom:40px}.hero__content{padding:0 20px}.hero__title{font-size:clamp(1.6rem,6vw,2.4rem)}.hero__cta .btn{padding:12px 24px;font-size:.68rem}.mobile-menu{display:block;position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:9999;opacity:0;visibility:hidden}}
+    </style>
 
     <!-- Fonts (non-render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -139,7 +139,7 @@ img, video {
   width: 22px;
   height: 1.5px;
   background: var(--text-primary);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* ============================================================
@@ -394,7 +394,7 @@ img, video {
   color: var(--gold);
   background: transparent;
   cursor: pointer;
-  transition: all 0.35s ease;
+  transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .btn:hover {
@@ -688,7 +688,7 @@ img, video {
   color: var(--text-primary);
   font-size: 1.2rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   z-index: 1001;
 }
 
@@ -739,7 +739,7 @@ img, video {
   background: var(--bg-glass);
   border: 1px solid var(--border);
   text-align: center;
-  transition: all 0.4s ease;
+  transition: background 0.4s ease, border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
 }
 
@@ -872,7 +872,7 @@ img, video {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-primary);
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-card:hover {
@@ -903,7 +903,7 @@ img, video {
   justify-content: center;
   border: 1px solid var(--border);
   color: var(--text-secondary);
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social-icon:hover {
