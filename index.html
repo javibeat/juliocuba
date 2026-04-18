@@ -58,54 +58,13 @@
     <!-- Preload -->
     <link rel="preload" href="assets/images/julio.webp" as="image" type="image/webp" fetchpriority="high">
 
-    <!-- Fonts (non-render-blocking) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=swap"></noscript>
 
-    <!-- Critical CSS (above-the-fold) -->
-    <style>
-      *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-      :root{--gold:#c9a84c;--gold-light:#e4cc7a;--gold-glow:rgba(201,168,76,0.35);--bg-dark:#0a0a0a;--text-primary:#fff;--text-secondary:rgba(255,255,255,0.75);--font-display:"Cormorant Garamond","Times New Roman",Georgia,serif;--font-body:"Outfit",-apple-system,system-ui,sans-serif}
-      html{scroll-behavior:smooth;scroll-padding-top:80px}
-      body{font-family:var(--font-body);color:var(--text-primary);background-color:var(--bg-dark);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-      a{text-decoration:none;color:inherit}
-      img,video{display:block;max-width:100%}
-      .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;border-bottom:1px solid transparent;animation:navSlideDown .6s ease-out 1.6s both}
-      .nav__inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:64px}
-      .nav__logo{height:28px;width:auto;opacity:.9}
-      .nav__links{display:flex;gap:32px;list-style:none}
-      .nav__link{font-family:var(--font-body);font-size:.7rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--text-secondary);transition:color .3s ease}
-      .nav__hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
-      .nav__hamburger span{width:22px;height:1.5px;background:var(--text-primary)}
-      .hero{position:relative;height:100vh;height:100dvh;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden;padding-bottom:60px}
-      .hero__bg{position:absolute;inset:0;z-index:0}
-      .hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 15%;animation:heroRevealZoom 1.6s cubic-bezier(.25,.46,.45,.94) .1s both;will-change:transform,opacity}
-      .hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.2) 0%,rgba(10,10,10,.15) 30%,rgba(10,10,10,.5) 55%,rgba(10,10,10,.95) 100%);z-index:1}
-      .hero__particles{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none}
-      .hero__content{position:relative;z-index:3;max-width:850px;padding:0 24px 0}
-      .hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);z-index:3;opacity:.6}
-      .hero__label{display:inline-block;font-family:var(--font-body);font-size:.72rem;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;animation:clipReveal .6s cubic-bezier(.77,0,.175,1) .8s both;position:relative;will-change:clip-path,opacity}
-      .hero__title{font-family:var(--font-display);font-size:clamp(2.2rem,5.5vw,4.5rem);font-weight:300;font-style:italic;line-height:1.15;color:#fff;margin-bottom:24px;text-shadow:0 2px 40px rgba(0,0,0,.5);animation:titleReveal 1s cubic-bezier(.25,.46,.45,.94) 1s both;will-change:transform,opacity}
-      .hero__title strong{font-weight:500;font-style:normal;color:var(--gold-light);text-shadow:0 0 80px var(--gold-glow),0 0 120px rgba(201,168,76,.15)}
-      .hero__subtitle{font-family:var(--font-body);font-size:clamp(.92rem,1.6vw,1.1rem);font-weight:300;line-height:1.75;color:rgba(255,255,255,.85);max-width:600px;margin:0 auto 36px;text-shadow:0 1px 20px rgba(0,0,0,.4);animation:clipReveal .6s cubic-bezier(.77,0,.175,1) 1.4s both}
-      .hero__cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:ctaReveal .6s cubic-bezier(.25,.46,.45,.94) 1.8s both}
-      .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;font-family:var(--font-body);font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);background:transparent;cursor:pointer;transition:all .35s ease}
-      .btn--filled{background:var(--gold);color:var(--bg-dark)}
-      @keyframes heroRevealZoom{0%{transform:scale(1.15);opacity:0}100%{transform:scale(1);opacity:1}}
-      @keyframes clipReveal{0%{clip-path:inset(0 100% 0 0);opacity:0}30%{opacity:1}100%{clip-path:inset(0 0% 0 0);opacity:1}}
-      @keyframes titleReveal{0%{opacity:0;transform:translateY(60px) scale(.92)}60%{opacity:1}100%{opacity:1;transform:translateY(0) scale(1)}}
-      @keyframes ctaReveal{0%{opacity:0;transform:translateY(30px)}100%{opacity:1;transform:translateY(0)}}
-      @keyframes navSlideDown{0%{opacity:0;transform:translateY(-100%)}100%{opacity:1;transform:translateY(0)}}
-      @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-      @media screen and (max-width:900px){.nav__links{display:none!important}.nav__hamburger{display:flex;z-index:10000;position:relative}.hero{padding-bottom:40px}.hero__content{padding:0 20px}.hero__title{font-size:clamp(1.6rem,6vw,2.4rem)}}
-    </style>
-
-    <!-- Non-critical styles (deferred) -->
-    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Schema.org — Person -->
     <script type="application/ld+json">
@@ -308,7 +267,7 @@
                     <div class="about__image-wrap">
                         <picture>
                             <source srcset="assets/images/julio-full.webp" type="image/webp">
-                            <img class="about__image" src="assets/images/julio-full.png"
+                            <img class="about__image" src="assets/images/julio-full.jpg"
                                 alt="Julio Cuba full body portrait with electric violin" width="800" height="648" loading="lazy">
                         </picture>
                     </div>
@@ -367,7 +326,7 @@
                     <div class="gallery-item">
                         <picture>
                             <source srcset="assets/images/julio-playing-blue.webp" type="image/webp">
-                            <img src="assets/images/julio-playing-blue.png" alt="Julio Cuba performing electric violin in blue suit" width="1200" height="1157" loading="lazy">
+                            <img src="assets/images/julio-playing-blue.jpg" alt="Julio Cuba performing electric violin in blue suit" width="1200" height="1157" loading="lazy">
                         </picture>
                     </div>
                     <div class="gallery-item">
@@ -379,7 +338,7 @@
                     <div class="gallery-item">
                         <picture>
                             <source srcset="assets/images/julio-promo-art.webp" type="image/webp">
-                            <img src="assets/images/julio-promo-art.png" alt="Julio Cuba artistic promotional poster with tropical elements" width="800" height="1200" loading="lazy">
+                            <img src="assets/images/julio-promo-art.jpg" alt="Julio Cuba artistic promotional poster with tropical elements" width="800" height="1200" loading="lazy">
                         </picture>
                     </div>
                     <div class="gallery-item">
@@ -397,7 +356,7 @@
                     <div class="gallery-item">
                         <picture>
                             <source srcset="assets/images/julio-playing-dark.webp" type="image/webp">
-                            <img src="assets/images/julio-playing-dark.png" alt="Julio Cuba playing electric violin on stage with dramatic lighting" width="800" height="1200" loading="lazy">
+                            <img src="assets/images/julio-playing-dark.jpg" alt="Julio Cuba playing electric violin on stage with dramatic lighting" width="800" height="1200" loading="lazy">
                         </picture>
                     </div>
                     <div class="gallery-item">
@@ -409,7 +368,7 @@
                     <div class="gallery-item">
                         <picture>
                             <source srcset="assets/images/julio-white.webp" type="image/webp">
-                            <img src="assets/images/julio-white.png" alt="Julio Cuba in white suit holding electric violin and bow" width="800" height="1454" loading="lazy">
+                            <img src="assets/images/julio-white.jpg" alt="Julio Cuba in white suit holding electric violin and bow" width="800" height="1454" loading="lazy">
                         </picture>
                     </div>
                     <div class="gallery-item">
@@ -427,7 +386,7 @@
                     <div class="gallery-item">
                         <picture>
                             <source srcset="assets/images/julio-full.webp" type="image/webp">
-                            <img src="assets/images/julio-full.png" alt="Julio Cuba full body promotional photo" width="800" height="648" loading="lazy">
+                            <img src="assets/images/julio-full.jpg" alt="Julio Cuba full body promotional photo" width="800" height="648" loading="lazy">
                         </picture>
                     </div>
                 </div>
@@ -509,7 +468,7 @@
                         <a href="assets/docs/JULIO CUBA presskit.pdf" aria-label="View Press Kit PDF">
                             <picture>
                                 <source srcset="assets/images/presskit.webp" type="image/webp">
-                                <img class="press__image" src="assets/images/presskit.png"
+                                <img class="press__image" src="assets/images/presskit.jpg"
                                     alt="Julio Cuba Press Kit, biography, photos and booking details" width="800" height="565" loading="lazy">
                             </picture>
                         </a>
