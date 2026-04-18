@@ -116,13 +116,22 @@ document.addEventListener("DOMContentLoaded", function () {
             lbImg.src = gallerySrcs[lbIndex];
             lbImg.alt = galleryAlts[lbIndex];
             lbCounter.textContent = (lbIndex + 1) + " / " + gallerySrcs.length;
-            lightbox.classList.add("open");
+            lightbox.style.display = "flex";
+            requestAnimationFrame(function () {
+                lightbox.classList.add("open");
+            });
             document.body.style.overflow = "hidden";
         }
 
         function closeLightbox() {
             lightbox.classList.remove("open");
             document.body.style.overflow = "";
+            lightbox.addEventListener("transitionend", function handler() {
+                if (!lightbox.classList.contains("open")) {
+                    lightbox.style.display = "none";
+                }
+                lightbox.removeEventListener("transitionend", handler);
+            });
         }
 
         function nextLightbox() {
