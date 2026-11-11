@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://juliocuba.es/</loc>
-        <lastmod>2026-04-17</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
+        <lastmod>2026-11-11</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://juliocuba.es/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://juliocuba.es/es/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://juliocuba.es/"/>
+        <video:video>
+            <video:thumbnail_loc>https://juliocuba.es/assets/images/julio-video-poster.jpg</video:thumbnail_loc>
+            <video:title>Julio Cuba live: electric violin in Dubai</video:title>
+            <video:description>Julio Cuba playing electric violin live at the Burj Al Arab, Dubai beach clubs, yachts and stages. Season 2026/27 in Dubai.</video:description>
+            <video:content_loc>https://juliocuba.es/assets/videos/julio-cuba-live.mp4</video:content_loc>
+            <video:duration>75</video:duration>
+            <video:publication_date>2026-11-11</video:publication_date>
+        </video:video>
     </url>
     <url>
-        <loc>https://juliocuba.es/llms.txt</loc>
+        <loc>https://juliocuba.es/es/</loc>
+        <lastmod>2026-11-11</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://juliocuba.es/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://juliocuba.es/es/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://juliocuba.es/"/>
+    </url>
+    <url>
+        <loc>https://juliocuba.es/press.html</loc>
+        <lastmod>2026-11-11</lastmod>
+    </url>
+    <url>
+        <loc>https://juliocuba.es/video.html</loc>
         <lastmod>2026-04-17</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://juliocuba.es/redes.html</loc>
+        <lastmod>2026-04-17</lastmod>
     </url>
 </urlset>
